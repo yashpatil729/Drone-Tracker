@@ -62,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
       // so that the display can reflect the updated values. If we changed
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
-      _counter++;
+      _counter = (_counter + 1) % 4;
     });
   }
 
@@ -75,17 +75,6 @@ class _MyHomePageState extends State<MyHomePage> {
       ["Service Completed", "10th July 2023, 11.45pm"]
     ];
 
-    // List<TextDto> OrderShippedDataList = [
-    //   TextDto("Pilot on the way to the location", "30 mins away"),
-    // ];
-
-    // List<TextDto> OrderOutOfDeliveryDataList = [
-    //   TextDto("Payment Completed", "10th July 2023, 11.45pm"),
-    // ];
-
-    // List<TextDto> OrderDeviveredDataList = [
-    //   TextDto("Service Completed", "10th July 2023, 11.45pm"),
-    // ];
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
     //
@@ -213,6 +202,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         const Align(
                           alignment: AlignmentDirectional(-1.00, 0.00),
                           child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
@@ -365,6 +355,12 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         Text(
                           '05-07-2023',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        Text(
+                          '5 Hours',
                           style: TextStyle(
                             fontWeight: FontWeight.w500,
                           ),
@@ -618,19 +614,34 @@ class _MyHomePageState extends State<MyHomePage> {
                                               size: 30,
                                               child: Container(
                                                 width: 20.0,
-                                                decoration: const BoxDecoration(
-                                                  shape: BoxShape.circle,
-                                                  gradient: LinearGradient(
-                                                    colors: [
-                                                      Color.fromARGB(
-                                                          255, 1, 22, 20),
-                                                      Color.fromARGB(
-                                                          255, 90, 184, 168),
-                                                    ],
-                                                    begin: Alignment.topRight,
-                                                    end: Alignment.bottomLeft,
-                                                  ),
-                                                ),
+                                                decoration: (index <= _counter)
+                                                    ? BoxDecoration(
+                                                        shape: BoxShape.circle,
+                                                        gradient:
+                                                            LinearGradient(
+                                                          colors: [
+                                                            Color.fromARGB(
+                                                                255, 1, 22, 20),
+                                                            Color.fromARGB(255,
+                                                                90, 184, 168),
+                                                          ],
+                                                          begin: Alignment
+                                                              .topRight,
+                                                          end: Alignment
+                                                              .bottomLeft,
+                                                        ),
+                                                      )
+                                                    : BoxDecoration(
+                                                        shape: BoxShape.circle,
+                                                        color: Colors.grey),
+                                                child: (index <= _counter)
+                                                    ? Icon(
+                                                        Icons.check,
+                                                        color: Colors.white,
+                                                      )
+                                                    : SizedBox(
+                                                        height: 0,
+                                                      ),
                                               ));
                                         },
                                         connectorBuilder: (_, index, type) {
@@ -643,27 +654,44 @@ class _MyHomePageState extends State<MyHomePage> {
                                               //     child:
                                               Container(
                                             width: 6.0,
-                                            decoration: BoxDecoration(
-                                              // shape: BoxShape.circle,
-                                              gradient: LinearGradient(
-                                                colors: (t ==
-                                                        "ConnectorType.end")
-                                                    ? [
-                                                        Color.fromARGB(
-                                                            255, 1, 22, 20),
-                                                        Color.fromARGB(
-                                                            255, 27, 103, 90),
-                                                      ]
-                                                    : [
-                                                        Color.fromARGB(
-                                                            255, 27, 103, 90),
-                                                        Color.fromARGB(
-                                                            255, 90, 184, 168),
-                                                      ],
-                                                begin: Alignment.topCenter,
-                                                end: Alignment.bottomCenter,
-                                              ),
-                                            ),
+                                            decoration: (index <= _counter - 1)
+                                                ? BoxDecoration(
+                                                    // shape: BoxShape.circle,
+                                                    gradient: LinearGradient(
+                                                      colors: (t ==
+                                                              "ConnectorType.end")
+                                                          ? [
+                                                              Color.fromARGB(
+                                                                  255,
+                                                                  1,
+                                                                  22,
+                                                                  20),
+                                                              Color.fromARGB(
+                                                                  255,
+                                                                  27,
+                                                                  103,
+                                                                  90),
+                                                            ]
+                                                          : [
+                                                              Color.fromARGB(
+                                                                  255,
+                                                                  27,
+                                                                  103,
+                                                                  90),
+                                                              Color.fromARGB(
+                                                                  255,
+                                                                  90,
+                                                                  184,
+                                                                  168),
+                                                            ],
+                                                      begin:
+                                                          Alignment.topCenter,
+                                                      end: Alignment
+                                                          .bottomCenter,
+                                                    ),
+                                                  )
+                                                : BoxDecoration(
+                                                    color: Colors.grey),
                                           );
                                           // );
                                         },
@@ -729,42 +757,62 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       // ),
       floatingActionButton: Container(
-        width: MediaQuery.of(context).size.width * 0.9,
-        height: 60,
-        decoration: const BoxDecoration(
-            // borderRadius: BorderRadius.circular(4),
-            shape: BoxShape.rectangle,
-            // color: Colors.teal,
-            gradient: LinearGradient(
-              begin: Alignment.topRight,
-              end: Alignment.bottomLeft,
-              colors: [
-                Color.fromARGB(255, 19, 25, 25),
-                Color.fromARGB(255, 45, 144, 127),
-              ],
-            )),
+          width: MediaQuery.of(context).size.width * 0.9,
+          height: 60,
+          decoration: const BoxDecoration(
+              // borderRadius: BorderRadius.circular(4),
+              shape: BoxShape.rectangle,
+              // color: Colors.teal,
+              gradient: LinearGradient(
+                begin: Alignment.topRight,
+                end: Alignment.bottomLeft,
+                colors: [
+                  Color.fromARGB(255, 19, 25, 25),
+                  Color.fromARGB(255, 45, 144, 127),
+                ],
+              )),
+          child: FloatingActionButton.extended(
+              onPressed: () {
+                _incrementCounter();
+                print(_counter);
+              },
+              // () {
+              //   setState(() {
+              //     print(done);
+              //     done = (done + 1) % 4;
+              //     print(done);
+              //   });
+              // },
+              backgroundColor: Colors.transparent,
+              label: Text("Connect with Pilot",
+                  style: TextStyle(
+                    height: 3,
+                    // fontSize: 5,
 
-        child: const FittedBox(
-            fit: BoxFit.fitHeight,
-            child: Text("Connect with Pilot",
-                style: TextStyle(
-                  height: 3,
-                  // fontSize: 5,
-                  color: Colors.white,
-                  // fontWeight: FontWeight.bold,
-                ))),
+                    color: Colors.white,
+                    // fontWeight: FontWeight.bold,
+                  )))
+          // const FittedBox(
+          //     fit: BoxFit.fitHeight,
+          //     child: Text("Connect with Pilot",
+          //         style: TextStyle(
+          //           height: 3,
+          //           // fontSize: 5,
+          //           color: Colors.white,
+          //           // fontWeight: FontWeight.bold,
+          //         ))),
 
-        // child:  Container(
+          // child:  Container(
 
-        // padding: EdgeIn
-        // sets.all(0),
+          // padding: EdgeIn
+          // sets.all(0),
 
-        // const Text(
-        //     '123456',
-        //     style: TextStyle(color: Colors.white),
-        //   ),
-        // )
-      ),
+          // const Text(
+          //     '123456',
+          //     style: TextStyle(color: Colors.white),
+          //   ),
+          // )
+          ),
       // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
