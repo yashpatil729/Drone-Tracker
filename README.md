@@ -9,9 +9,9 @@ $flutter run <br>
 Screenshots: <br><br>
 <img src="./assets/0.png" alt="Screenshot1" width="300" /> &nbsp; &nbsp; &nbsp; &nbsp; <img src="./assets/1.png" alt="Screenshot2" width="300" /> &nbsp; &nbsp; &nbsp; &nbsp; <img src="./assets/3.png" alt="Screenshot3" width="300" /> <br><br>
  
-<img src="./assets/4.png" alt="Screenshot4" width="200" /><br><br>
-<img src="./assets/5.png" alt="Screenshot5" width="200" /><br><br>
-<img src="./assets/6.png" alt="Screenshot6" width="200" /><br><br>
+<img src="./assets/4.png" alt="Screenshot4"  /><br><br>
+<img src="./assets/5.png" alt="Screenshot5" /><br><br>
+<img src="./assets/6.png" alt="Screenshot6"  /><br><br>
 
  <br>
 Yash Patil <br>
