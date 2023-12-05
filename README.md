@@ -1,6 +1,6 @@
 # track2
 
-The app has UI as suggested in the mail. I haven't added API calls, or assigned dynamic button click facilities to it yet. But the UI matches the requirements. Please review the project and mail me at yashpp21@iitk.ac.in.<br>
+The app has UI as suggested in the mail. I haven't added API calls. The "Connect with Pilot" button changes the order tracker states as requested in the form. The UI matches the requirements. Please review the project <br>
  <br>
 Run:<br>
 $flutter pub get <br>
@@ -17,7 +17,9 @@ Screenshots: <br><br>
 Yash Patil <br>
 IIT Kanpur <br>
 MSR-CSE 2021 <br>
-Roll-21111410 <be>
+Roll-21111410 <br>
+Contact- yashpp21@iitk.ac.in <br>
+ Mobile no.- 9168426448 / 9511713542 <br>
  <br>
 
 
