@@ -7,13 +7,13 @@ $flutter pub get <br>
 $flutter run <br>
  <br>
 Screenshots:
-![alt text][./assets/0.png] <br>
-![alt text][./assets/1.png] <br>
-![alt text][./assets/2.png] <br>
-![alt text][./assets/3.png] <br>
-![alt text][./assets/4.png] <br>
-![alt text][./assets/5.png] <br>
-![alt text][./assets/6.png] <br>
+![Alt text](./assets/0.png) <br>
+![Alt text](./assets/1.png) <br>
+![Alt text](./assets/2.png) <br>
+![Alt text](./assets/3.png) <br>
+![Alt text](./assets/4.png) <br>
+![Alt text](./assets/5.png) <br>
+![Alt text](./assets/6.png) <br>
  <br>
 Yash Patil <br>
 IIT Kanpur <br>
