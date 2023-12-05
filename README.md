@@ -7,8 +7,7 @@ $flutter pub get <br>
 $flutter run <br>
  <br>
 Screenshots:
-![Alt text](./assets/0.png) &nbsp; &nbsp;
-![Alt text](./assets/1.png) <br><br>
+![Alt text](./assets/0.png) &nbsp; &nbsp; ![Alt text](./assets/1.png) <br><br>
 ![Alt text](./assets/2.png) &nbsp; &nbsp; NEXT -> <br><br>
 ![Alt text](./assets/3.png) <br><br>
 ![Alt text](./assets/4.png) <br><br>
