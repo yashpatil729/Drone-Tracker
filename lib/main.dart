@@ -143,7 +143,7 @@ class _MyHomePageState extends State<MyHomePage> {
         // title: Text(widget.title),
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.only(top: 20),
+        padding: EdgeInsetsDirectional.fromSTEB(2, 10, 2, 2),
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
         child: Column(
@@ -480,278 +480,264 @@ class _MyHomePageState extends State<MyHomePage> {
                             //       OrderOutOfDeliveryDataList,
                             //   deliveredTitleAndDateList: OrderDeviveredDataList,
                             // ),
-                            Align(
-                                alignment: const AlignmentDirectional(0, 0),
-                                child: SizedBox(
-                                    height: 400,
-                                    width:
-                                        MediaQuery.of(context).size.width * 0.9,
-                                    child: Timeline.tileBuilder(
-                                      theme: TimelineThemeData(
-                                        nodePosition: 0,
-                                        // color:Color.lerp( Color.fromARGB(255, 1, 22, 20),Color.fromARGB(255, 45, 144, 127), double p),// Colors.blue,
-                                        // indicatorTheme:
-                                        //     const IndicatorThemeData(
-                                        //   position: 0,
-                                        //   size: 30.0,
-                                        // ),
-                                        // connectorTheme:
-                                        //     const ConnectorThemeData(
-                                        //   space: 30.0,
-                                        //   thickness: 5.0,
-                                        // ),
-                                      ),
+                            // Align(
+                            //     alignment: const AlignmentDirectional(0, 0),
+                            //     child:
+                            SizedBox(
+                                height: 400,
+                                width: MediaQuery.of(context).size.width * 0.9,
+                                child: Timeline.tileBuilder(
+                                  theme: TimelineThemeData(
+                                    nodePosition: 0,
+                                    // color:Color.lerp( Color.fromARGB(255, 1, 22, 20),Color.fromARGB(255, 45, 144, 127), double p),// Colors.blue,
+                                    // indicatorTheme:
+                                    //     const IndicatorThemeData(
+                                    //   position: 0,
+                                    //   size: 30.0,
+                                    // ),
+                                    // connectorTheme:
+                                    //     const ConnectorThemeData(
+                                    //   space: 30.0,
+                                    //   thickness: 5.0,
+                                    // ),
+                                  ),
 
-                                      // TimelineThemeData: InitialOrderDataList,
-                                      builder: TimelineTileBuilder.connected(
-                                        itemCount: 4,
+                                  // TimelineThemeData: InitialOrderDataList,
+                                  builder: TimelineTileBuilder.connected(
+                                    itemCount: 4,
 
-                                        // contentsAlign: ContentsAlign.alternating,
-                                        contentsBuilder: (context, index) {
-                                          // print(index);
-                                          // Icon icon;
-                                          // if (index == 0) {
-                                          //   icon = const Icon(
-                                          //     Icons.document_scanner_outlined,
-                                          //     //   color: Color.fromARGB(
-                                          //     //       0, 59, 56, 56),
-                                          //   );
-                                          // }
-                                          // if (index == 1) {
-                                          //   icon = const Icon(
-                                          //     Icons.paragliding_outlined,
-                                          //     //   color: Color.fromARGB(
-                                          //     //       0, 59, 56, 56),
-                                          //   );
-                                          // }
-                                          // if (index == 2) {
-                                          //   icon = const Icon(
-                                          //     Icons.payment_outlined,
-                                          //     //   color: Color.fromARGB(
-                                          //     //       0, 59, 56, 56),
-                                          //   );
-                                          // }
-                                          // if (index == 3) {
-                                          //   icon = const Icon(
-                                          //     Icons.handshake_outlined,
-                                          //     //   color: Color.fromARGB(
-                                          //     //       0, 59, 56, 56),
-                                          //   );
-                                          // }
-                                          // print(icon);
-                                          return SizedBox(
-                                              height: 60,
-                                              child: Padding(
-                                                  padding:
-                                                      const EdgeInsets.all(2.0),
-                                                  child: Row(
-                                                      mainAxisAlignment:
-                                                          MainAxisAlignment
-                                                              .spaceBetween,
-                                                      children: [
-                                                        Column(
-                                                            crossAxisAlignment:
-                                                                CrossAxisAlignment
-                                                                    .start,
-                                                            children: [
-                                                              Text(
-                                                                InitialOrderDataList[
-                                                                    index][0],
-                                                                style:
-                                                                    const TextStyle(
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w500,
-                                                                ),
-                                                              ),
-                                                              Text(
-                                                                InitialOrderDataList[
-                                                                    index][1],
-                                                                // style: const TextStyle(
-                                                                //     fontSize: 16.0),
-                                                              ),
-                                                            ]),
-                                                        (index == 0)
+                                    // contentsAlign: ContentsAlign.alternating,
+                                    contentsBuilder: (context, index) {
+                                      // print(index);
+                                      // Icon icon;
+                                      // if (index == 0) {
+                                      //   icon = const Icon(
+                                      //     Icons.document_scanner_outlined,
+                                      //     //   color: Color.fromARGB(
+                                      //     //       0, 59, 56, 56),
+                                      //   );
+                                      // }
+                                      // if (index == 1) {
+                                      //   icon = const Icon(
+                                      //     Icons.paragliding_outlined,
+                                      //     //   color: Color.fromARGB(
+                                      //     //       0, 59, 56, 56),
+                                      //   );
+                                      // }
+                                      // if (index == 2) {
+                                      //   icon = const Icon(
+                                      //     Icons.payment_outlined,
+                                      //     //   color: Color.fromARGB(
+                                      //     //       0, 59, 56, 56),
+                                      //   );
+                                      // }
+                                      // if (index == 3) {
+                                      //   icon = const Icon(
+                                      //     Icons.handshake_outlined,
+                                      //     //   color: Color.fromARGB(
+                                      //     //       0, 59, 56, 56),
+                                      //   );
+                                      // }
+                                      // print(icon);
+                                      return SizedBox(
+                                          height: 60,
+                                          child: Padding(
+                                              padding:
+                                                  const EdgeInsets.all(2.0),
+                                              child: Row(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment
+                                                          .spaceBetween,
+                                                  children: [
+                                                    Column(
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .start,
+                                                        children: [
+                                                          Text(
+                                                            InitialOrderDataList[
+                                                                index][0],
+                                                            style:
+                                                                const TextStyle(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w500,
+                                                            ),
+                                                          ),
+                                                          Text(
+                                                            InitialOrderDataList[
+                                                                index][1],
+                                                            // style: const TextStyle(
+                                                            //     fontSize: 16.0),
+                                                          ),
+                                                        ]),
+                                                    (index == 0)
+                                                        ? const Icon(
+                                                            Icons
+                                                                .document_scanner_outlined,
+                                                            //   color: Color.fromARGB(
+                                                            //       0, 59, 56, 56),
+                                                          )
+                                                        : (index == 1)
                                                             ? const Icon(
                                                                 Icons
-                                                                    .document_scanner_outlined,
+                                                                    .paragliding_outlined,
                                                                 //   color: Color.fromARGB(
                                                                 //       0, 59, 56, 56),
                                                               )
-                                                            : (index == 1)
+                                                            : (index == 2)
                                                                 ? const Icon(
                                                                     Icons
-                                                                        .paragliding_outlined,
+                                                                        .payment_outlined,
                                                                     //   color: Color.fromARGB(
                                                                     //       0, 59, 56, 56),
                                                                   )
-                                                                : (index == 2)
-                                                                    ? const Icon(
-                                                                        Icons
-                                                                            .payment_outlined,
-                                                                        //   color: Color.fromARGB(
-                                                                        //       0, 59, 56, 56),
-                                                                      )
-                                                                    : const Icon(
-                                                                        Icons
-                                                                            .handshake_outlined,
-                                                                        //   color: Color.fromARGB(
-                                                                        //       0, 59, 56, 56),
-                                                                      ),
-                                                        // icon,
-                                                      ])));
-                                          //     Align(
-                                          //   alignment: Alignment.topLeft,
-                                          //   child: Padding(
-                                          //     padding: const EdgeInsets.all(10.0),
-                                          //     child:
-                                          //         Text('Timeline Event $index'),
-                                          //   ),
-                                          // )
-                                        },
-                                        indicatorBuilder: (_, index) {
-                                          return DotIndicator(
-                                              size: 30,
-                                              child: Container(
-                                                width: 20.0,
-                                                decoration: (index <= _counter)
-                                                    ? BoxDecoration(
-                                                        shape: BoxShape.circle,
-                                                        gradient:
-                                                            LinearGradient(
-                                                          colors: [
-                                                            Color.fromARGB(
-                                                                255, 1, 22, 20),
-                                                            Color.fromARGB(255,
-                                                                90, 184, 168),
-                                                          ],
-                                                          begin: Alignment
-                                                              .topRight,
-                                                          end: Alignment
-                                                              .bottomLeft,
-                                                        ),
-                                                      )
-                                                    : BoxDecoration(
-                                                        shape: BoxShape.circle,
-                                                        color: Colors.grey),
-                                                child: (index <= _counter)
-                                                    ? Icon(
-                                                        Icons.check,
-                                                        color: Colors.white,
-                                                      )
-                                                    : SizedBox(
-                                                        height: 0,
-                                                      ),
-                                              ));
-                                        },
-                                        connectorBuilder: (_, index, type) {
-                                          // print(index);
-                                          // print(type.toString());
-                                          String t = type.toString();
-                                          return
-                                              // DotIndicator(
-                                              //     size: 30,
-                                              //     child:
-                                              Container(
-                                            width: 6.0,
-                                            decoration: (index <= _counter - 1)
+                                                                : const Icon(
+                                                                    Icons
+                                                                        .handshake_outlined,
+                                                                    //   color: Color.fromARGB(
+                                                                    //       0, 59, 56, 56),
+                                                                  ),
+                                                    // icon,
+                                                  ])));
+                                      //     Align(
+                                      //   alignment: Alignment.topLeft,
+                                      //   child: Padding(
+                                      //     padding: const EdgeInsets.all(10.0),
+                                      //     child:
+                                      //         Text('Timeline Event $index'),
+                                      //   ),
+                                      // )
+                                    },
+                                    indicatorBuilder: (_, index) {
+                                      return DotIndicator(
+                                          size: 30,
+                                          child: Container(
+                                            width: 20.0,
+                                            decoration: (index <= _counter)
                                                 ? BoxDecoration(
-                                                    // shape: BoxShape.circle,
+                                                    shape: BoxShape.circle,
                                                     gradient: LinearGradient(
-                                                      colors: (t ==
-                                                              "ConnectorType.end")
-                                                          ? [
-                                                              Color.fromARGB(
-                                                                  255,
-                                                                  1,
-                                                                  22,
-                                                                  20),
-                                                              Color.fromARGB(
-                                                                  255,
-                                                                  27,
-                                                                  103,
-                                                                  90),
-                                                            ]
-                                                          : [
-                                                              Color.fromARGB(
-                                                                  255,
-                                                                  27,
-                                                                  103,
-                                                                  90),
-                                                              Color.fromARGB(
-                                                                  255,
-                                                                  90,
-                                                                  184,
-                                                                  168),
-                                                            ],
-                                                      begin:
-                                                          Alignment.topCenter,
-                                                      end: Alignment
-                                                          .bottomCenter,
+                                                      colors: [
+                                                        Color.fromARGB(
+                                                            255, 1, 22, 20),
+                                                        Color.fromARGB(
+                                                            255, 90, 184, 168),
+                                                      ],
+                                                      begin: Alignment.topRight,
+                                                      end: Alignment.bottomLeft,
                                                     ),
                                                   )
                                                 : BoxDecoration(
+                                                    shape: BoxShape.circle,
                                                     color: Colors.grey),
-                                          );
-                                          // );
-                                        },
-                                        // IndicatorStyle.dot((
-                                        // width: 20.0,
-                                        // color: Colors.transparent,
-                                        // indicatorXY:
-                                        //     0.5, // Adjust this value to position the indicator
-                                        // indicatorY: 0.0,
-                                        // drawGap: true,
+                                            child: (index <= _counter)
+                                                ? Icon(
+                                                    Icons.check,
+                                                    color: Colors.white,
+                                                  )
+                                                : SizedBox(
+                                                    height: 0,
+                                                  ),
+                                          ));
+                                    },
+                                    connectorBuilder: (_, index, type) {
+                                      // print(index);
+                                      // print(type.toString());
+                                      String t = type.toString();
+                                      return
+                                          // DotIndicator(
+                                          //     size: 30,
+                                          //     child:
+                                          Container(
+                                        width: 6.0,
+                                        decoration: (index <= _counter - 1)
+                                            ? BoxDecoration(
+                                                // shape: BoxShape.circle,
+                                                gradient: LinearGradient(
+                                                  colors: (t ==
+                                                          "ConnectorType.end")
+                                                      ? [
+                                                          Color.fromARGB(
+                                                              255, 1, 22, 20),
+                                                          Color.fromARGB(
+                                                              255, 27, 103, 90),
+                                                        ]
+                                                      : [
+                                                          Color.fromARGB(
+                                                              255, 27, 103, 90),
+                                                          Color.fromARGB(255,
+                                                              90, 184, 168),
+                                                        ],
+                                                  begin: Alignment.topCenter,
+                                                  end: Alignment.bottomCenter,
+                                                ),
+                                              )
+                                            : BoxDecoration(color: Colors.grey),
+                                      );
+                                      // );
+                                    },
+                                    // IndicatorStyle.dot((
+                                    // width: 20.0,
+                                    // color: Colors.transparent,
+                                    // indicatorXY:
+                                    //     0.5, // Adjust this value to position the indicator
+                                    // indicatorY: 0.0,
+                                    // drawGap: true,
 
-                                        // gapWidth:
-                                        //     8.0,
-                                        // // Adjust this value to control the gap width
-                                        // // child: Container(
-                                        //   decoration: const BoxDecoration(
-                                        //     shape: BoxShape.circle,
-                                        //     gradient: LinearGradient(
-                                        //       colors: [
-                                        //         Colors.blue,
-                                        //         Colors.green
-                                        //       ],
-                                        //       begin: Alignment.topCenter,
-                                        //       end: Alignment.bottomCenter,
-                                        //     ),
-                                        //   ),
-                                        // child: const Center(
-                                        //   child: Icon(
-                                        //     Icons.circle,
-                                        //     color: Colors.transparent,
-                                        //     size: 16.0,
-                                        //   ),
-                                        // ),
+                                    // gapWidth:
+                                    //     8.0,
+                                    // // Adjust this value to control the gap width
+                                    // // child: Container(
+                                    //   decoration: const BoxDecoration(
+                                    //     shape: BoxShape.circle,
+                                    //     gradient: LinearGradient(
+                                    //       colors: [
+                                    //         Colors.blue,
+                                    //         Colors.green
+                                    //       ],
+                                    //       begin: Alignment.topCenter,
+                                    //       end: Alignment.bottomCenter,
+                                    //     ),
+                                    //   ),
+                                    // child: const Center(
+                                    //   child: Icon(
+                                    //     Icons.circle,
+                                    //     color: Colors.transparent,
+                                    //     size: 16.0,
+                                    //   ),
+                                    // ),
 
-                                        // endIndicator: ClipRRect(
-                                        //   borderRadius:
-                                        //       const BorderRadius.vertical(
-                                        //           bottom:
-                                        //               Radius.circular(8.0)),
-                                        //   child: Container(
-                                        //     width: double.infinity,
-                                        //     height:
-                                        //         16.0, // Adjust this value to control the clipped indicator height
-                                        //     decoration: const BoxDecoration(
-                                        //       gradient: LinearGradient(
-                                        //         colors: [
-                                        //           Colors.blue,
-                                        //           Colors.green
-                                        //         ],
-                                        //         begin: Alignment.topCenter,
-                                        //         end: Alignment.bottomCenter,
-                                        //       ),
-                                        //     ),
-                                        //   ),
-                                        // ),
-                                        // ),
-                                      ),
-                                    )))
+                                    // endIndicator: ClipRRect(
+                                    //   borderRadius:
+                                    //       const BorderRadius.vertical(
+                                    //           bottom:
+                                    //               Radius.circular(8.0)),
+                                    //   child: Container(
+                                    //     width: double.infinity,
+                                    //     height:
+                                    //         16.0, // Adjust this value to control the clipped indicator height
+                                    //     decoration: const BoxDecoration(
+                                    //       gradient: LinearGradient(
+                                    //         colors: [
+                                    //           Colors.blue,
+                                    //           Colors.green
+                                    //         ],
+                                    //         begin: Alignment.topCenter,
+                                    //         end: Alignment.bottomCenter,
+                                    //       ),
+                                    //     ),
+                                    //   ),
+                                    // ),
+                                    // ),
+                                  ),
+                                ))
+                            // )
                           ]))
-                ])
+                ]),
+            SizedBox(
+              height: 400,
+            ),
           ],
         ),
       ),
