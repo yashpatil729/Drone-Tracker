@@ -1,16 +1,7 @@
 # track2
 
-A new Flutter project.
+The app has UI as suggested in main. I havent added any api_calls,assigned dynamic button click facilities to it yet. But the UI matches the requirement. Please review the project and mail me on yashpp21@iitk.ac.in.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Run:
+$flutter pub get
+$flutter run
